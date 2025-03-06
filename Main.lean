@@ -4,7 +4,7 @@ def main : IO Unit := do
   let stdin ← IO.getStdin
   let stdout ← IO.getStdout
 
-  stdout.putStrLn "Enter a natural number."
+  stdout.putStrLn "Enter a natural number:"
   let input ← stdin.getLine
 
   match input.trim.toNat? with
