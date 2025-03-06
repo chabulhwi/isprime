@@ -15,7 +15,7 @@ decreasing_by
     rw [Nat.pow_two]
     exact Nat.mul_lt_mul_of_pos_left (lt_of_succ_le h₁) (Nat.lt_of_lt_of_le Nat.two_pos h₁)
   have hltn : divisor < n := Nat.lt_of_lt_of_le hltp hpw2
-  simp [sub_add_eq]
+  simp only [sub_add_eq]
   exact sub_one_lt <| ne_of_gt (Nat.sub_pos_of_lt hltn)
 
 /-- `isPrime` tests whether a natural number is prime. -/
