@@ -13,10 +13,10 @@ decreasing_by
   have hltp : divisor < divisor ^ 2 := by
     conv => left; rw [← Nat.mul_one divisor]
     rw [Nat.pow_two]
-    exact Nat.mul_lt_mul_of_pos_left (Nat.lt_of_succ_le h₁) (Nat.lt_of_lt_of_le Nat.two_pos h₁)
+    exact Nat.mul_lt_mul_of_pos_left (lt_of_succ_le h₁) (Nat.lt_of_lt_of_le Nat.two_pos h₁)
   have hltn : divisor < n := Nat.lt_of_lt_of_le hltp hpw2
-  simp [Nat.sub_add_eq]
-  exact Nat.sub_one_lt <| Nat.ne_of_gt (Nat.sub_pos_of_lt hltn)
+  simp [sub_add_eq]
+  exact sub_one_lt <| ne_of_gt (Nat.sub_pos_of_lt hltn)
 
 /-- `isPrime` tests whether a natural number is prime. -/
 def isPrime (n : Nat) : Bool :=
