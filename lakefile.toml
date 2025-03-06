@@ -1,0 +1,10 @@
+name = "isprime"
+version = "0.1.0"
+defaultTargets = ["isprime"]
+
+[[lean_lib]]
+name = "IsPrime"
+
+[[lean_exe]]
+name = "isprime"
+root = "Main"
