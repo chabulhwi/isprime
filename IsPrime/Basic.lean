@@ -23,6 +23,6 @@ def isPrime (n : Nat) : Bool :=
   if h : n ≤ 1 then
     false
   else
-    isPrime.loop 2 n (Nat.le_refl 2) (Nat.gt_of_not_le h)
+    isPrime.loop 2 n (Nat.le_refl 2) (gt_of_not_le h)
 
 end Nat
