@@ -7,7 +7,7 @@ def main : IO Unit := do
   stdout.putStrLn "Enter a natural number:"
   let input ← stdin.getLine
 
-  match input.trim.toNat? with
+  match input.trimAscii.toNat? with
   | some n =>
     if Nat.isPrime n then
       stdout.putStrLn s!"{n} is a prime number."
